@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBV</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lightseagreen;
+        }
+        form{
+            width: fit-content;
+            padding: 30px;
+            background-color: lightgoldenrodyellow;
+            box-shadow: -10px 10px 30px black;
+            border-radius: 20px;
+        }
+        form,input{
+            font-size: 1.2em;
+        }
+        tr{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>This is a Class-Based-View Student-Form</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <table cellpadding="10">
+                <tr>{{SFO}}</tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
